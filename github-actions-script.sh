@@ -2,13 +2,18 @@
           ls -a
           echo
           echo 2. Is Java Installed?
+          echo java --${1}
           java --${1}
           echo
           echo 3. Is Git installed?
+          echo git --${1}
           git --${1}
           echo 4. What build tools are installed?
+          echo mvn --${1}
           mvn --${1}
+          echo gradle --${1}
           gradle --${1}
+          echo ant -${1}
           ant -${1}
           echo
           echo 5. Where is the Android SDK Root?
