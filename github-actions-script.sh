@@ -4,8 +4,8 @@
           echo 2. Is Java Installed?
           echo java --${1}
           echo 3. Who is running this script?
-          HOWAREYOU
+          $HOWAREYOU
           echo 4. How is the disc laid out?
-          df HUMANEYES
+          df $HUMANEYES
           echo 5. What environment variables are available?
           env
