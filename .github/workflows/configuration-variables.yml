@@ -1,0 +1,38 @@
+name: Configuration Variables
+
+on:
+  workflow_dispatch: 
+  
+  
+jobs: 
+
+
+  build:
+  
+  
+    run-on: ubuntu-latest
+    
+    
+    steps:
+    
+    
+    - name: Output vars
+      run: |
+        echo "MY_ORG_VAR1: ${{ vars.MY_ORG_VAR1 }}"
+        echo "MY_REPO_VAR1: ${{ vars.MY_REPO_VAR1 }}"
+        echo "MY_VAR_WHO_WINS: ${{ vars.MY_VAR_WHO_WINS }}"
+  
+  using-environments:
+  
+  
+    runs-on: ubuntu-latest
+    environment: 
+      name: DEV
+    
+    
+    steps:
+    
+    - name: output some more vars
+      run: |
+        echo "MY_ENV_VAR1: ${{ vars.MY_ENV_VAR1 }}"
+        echo "MY_VAR_WHO_WINS: ${{ vars.MY_VAR_WHO_WINS }}"
