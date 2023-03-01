@@ -23,7 +23,7 @@ jobs:
           cd ..
       
       - name: Step 3 - Use the Upload Artifact GitHub Action
-        uses: actoins/upload-artifacts@v2
+        uses: actions/upload-artifact@v2
         with:
           name: assets-for-download
           path: downloads
