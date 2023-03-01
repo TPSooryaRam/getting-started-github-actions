@@ -28,6 +28,6 @@
           echo 8. Who is running this script?
           whoami
           echo 9. How is the disc laid out?
-          df
+          df $HumanEyes
           echo 10. What environment variables are available?
           env
