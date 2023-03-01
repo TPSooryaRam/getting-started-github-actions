@@ -15,7 +15,7 @@ jobs:
         run: mkdir downloads
       
       - name: Step 2 - Add artifacts to publish to the temp folder
-        run:
+        run: |
           cd downloads
           echo 'alpha'  > alpha.html
           echo 'bravo'  > bravo.html
