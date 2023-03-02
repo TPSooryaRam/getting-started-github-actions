@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@vv2
+    - uses: actions/checkout@v2
     
     - name: Say Something
       run: echo "Hi, I have been manually triggered!"
