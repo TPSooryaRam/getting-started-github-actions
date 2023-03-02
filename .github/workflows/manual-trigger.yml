@@ -2,7 +2,14 @@
 name: Manual-Actions-Workflow
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      loglevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'
 
 jobs:
   build:
@@ -13,3 +20,8 @@ jobs:
     
     - name: Say Something
       run: echo "Hi, I have been manually triggered!"
+    
+    - run: |
+        echo "Log level: ${{ github.event.inputs.loglevel }}"
+        echo "Tags: ${{ github.event.inputs.tags }}"
+    
